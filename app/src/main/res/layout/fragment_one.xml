@@ -4,12 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <EditText
+        android:id="@+id/one_edittext"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="input"/>
     <TextView
+        android:id="@+id/one_textview"
+        android:layout_below="@id/one_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/one_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/one"
-        android:textSize="40dp"
-        android:textStyle="bold"
-        android:layout_centerInParent="true"/>
+        android:layout_below="@id/one_textview"
+        android:layout_centerHorizontal="true"
+        android:text="click"/>
 
 </RelativeLayout>

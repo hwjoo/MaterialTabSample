@@ -16,6 +16,9 @@ import android.view.View;
 import android.widget.Toast;
 
 
+import com.muhanbit.materialtabsample.rxeventbus.RxBus;
+import com.muhanbit.materialtabsample.rxeventbus.RxEventBus;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case 1:
                 Snackbar.make(MainView,"MENU 1 Click",Snackbar.LENGTH_SHORT).show();
+                RxBus.get().post("test", "hwjoo");
+                RxEventBus.getInstance().post("RxEventBus Hwjoo");
                 break;
             case 2:
                 Snackbar.make(MainView, "MENU 2 Click", Snackbar.LENGTH_SHORT).show();
